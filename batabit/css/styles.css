@@ -1,0 +1,369 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+:root{
+    --black: #000000;
+    --warm-black: #201E1C;
+    --warm-black-1: #282623;
+    --orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --white: #FFFFFF;
+    --off-white: #FAF8F7;
+    --soft-gray: #B5B0AC;
+    --dark-gray: #757575;
+    --dark-gray-1: #808080;
+    --dm-sans: 'DM Sans', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --font-xsm: .8rem;
+    --font-sm: 1.2rem;
+    --font-sm-md: 1.4rem;
+    --font-md: 1.8rem;
+    --font-lg: 2.4rem;
+    --font-xlg: 5.2rem;
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: var(--dm-sans);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(45deg, var(--orange), var(--black));
+}
+.header__logo{
+    margin: 3rem;
+}
+.header__intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 1.6rem;
+}
+.header__plans{
+    position: relative;
+    bottom: -2rem;
+    width: fit-content;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    font-size: var(--font-sm-md);
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: .4rem;
+    background-color: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+.title{
+    width: 100%;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    text-align: center;
+}
+.title--white{
+    color:var(--white);
+}
+.subtitle{
+    font-size: var(--font-md);
+    font-weight: 700;
+}
+.subtitle--orange{
+    color: var(--orange);
+}
+.subtitle--white{
+    color: var(--white)
+}
+.description{
+    width: 100%;
+    font-size:var(--font-sm-md);
+    font-weight: 500;
+    text-align: center;
+}
+.description--soft-orange{
+    color: var(--soft-orange);
+}
+.description--dark-gray{
+    color: var(--dark-gray)
+}
+.description--dark-gray-1{
+    color: var(--dark-gray-1)
+}
+.description--sm{
+    font-size: var(--font-sm);
+}
+.main, .section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.exchange{
+    background-color: var(--off-white);
+    gap: 2rem;
+    padding: 5rem 0;
+}
+.exchange__bitcoin-img{
+    width: 195px;
+    margin-bottom: 3rem;
+}
+.currency{
+    display: flex;
+    flex-direction: column;
+}
+.currency__container{
+    position: relative;
+    display: flex;
+}
+.currency__right-arrow-icon{
+    position: absolute;
+    right: -3.6rem;
+    top: calc(50% - .6rem);
+}
+.currency__table{
+    display: flex;
+    font-family: var(--inter);
+    border-radius: .8rem;
+    background-color: var(--white);
+}
+.currency td, .currency .subtitle{
+    padding: 1rem 1.2rem;
+}
+.currency__table tr:not(:first-child) td{
+    border-top: 1px solid var(--off-white);
+}
+.currency__table td:first-child{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--soft-gray);
+    border-right: 1px solid var(--off-white);
+}
+.currency__table td:last-child{
+    display: flex;
+    gap: 1rem;
+    font-size: var(--font-sm-md);
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+.exchange__updated{
+    width: fit-content;
+    padding: .8rem;
+    font-size: var(--font-sm);
+    border-radius: .8rem;
+    background-color: var(--soft-orange);
+}
+.features{
+    position: relative;
+    background-color: var(--warm-black);
+    padding: 5rem 1.6rem;
+    gap: 1.6rem;
+}
+.features__batata-icon{
+    position: absolute;
+    top: -1.2rem;
+}
+.feature-box{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: .8rem;
+    background-color: var(--warm-black-1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+.feature-box img{
+    width: 2.2rem;
+}
+.feature-box .description{
+    text-align: left;
+}
+.image{
+    background-image: url('../assets/img/bitcoinbaby.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 6.4rem;
+    min-height: 387px;
+}
+.plans{
+    padding: 5rem 0;
+    background-color: var(--off-white);
+    gap: 2rem;
+    overflow: hidden;
+}
+.plans__plan-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 190px;
+    margin-top: 2rem;
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+.recommended{
+    width: 11rem;
+    position: absolute;
+    left: calc(50% - 5.5rem);
+    top: -2rem;
+    padding: .8rem;
+    border-radius: .8rem;
+    background-color: var(--orange);
+}
+.recommended__p{
+    font-family: var(--inter);
+    text-align: center;
+    font-size: var(--font-sm);
+    font-weight: 700;
+    color: var(--white);
+}
+.plans__plans-container{
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+.plans__arrow-icon{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+.plans__arrow-icon--left{
+    left: calc(50% - 14rem);
+    transform: rotate(180deg);
+}
+.plans__arrow-icon--right{
+    right: calc(50% - 14rem);
+}
+.plans__payment-period{
+    font-size: var(--font-sm-md);
+    font-weight: 500;
+}
+.plans__price{
+    position: relative;
+    letter-spacing: -4px;
+    font-family: var(--inter);
+    font-size: var(--font-xlg); 
+    font-weight: 700;
+}
+.plans__price span{
+    position: absolute;
+    top: 1rem;
+    left: 3.6rem;
+    margin-right: 1rem;
+    font-size: var(--font-sm);
+    font-weight: 500;
+    color: #363636;
+}
+.plans__plan-box:last-child .plans__price span{
+    top: 1rem;
+    left: 2.4rem;
+}
+.plans__a{
+    text-decoration: none;
+}
+.plans__choose-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.6rem;
+    font-size: var(--font-sm-md);
+    font-weight: 700;
+    border-radius: .4rem;
+    border: 2px solid var(--orange);
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--orange);
+    padding: 5rem;
+}
+.footer__social-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer__social-links li{
+    font-size: var(--font-sm-md);
+    font-weight: 500;
+    list-style-type: none;
+    color: white;
+}
+.footer__right{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer__copyright{
+    font-size: var(--font-xsm);
+    color: white;
+}
+
+@media screen and (min-width:320px){
+    .image{
+        background-image: url('../assets/img/bitcoinbaby2x.jpg');
+        min-height: 520px;
+    }
+}
+
+@media screen and (min-width:620px){
+    .plans__arrow-icon{
+        display: none;
+    }
+    .features{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .feature-box{
+        width: calc(50% - 1.6rem);
+    }
+    
+    .recommended{
+        width: 13rem;
+        left: calc(50% - 6.5rem);
+    }
+
+    .footer__social-links{
+        min-width: 50%;
+        max-width: 62rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width:800px){
+    :root{
+        --font-xsm: 1.2rem;
+        --font-sm: 1.6rem;
+        --font-sm-md: 1.8rem;
+        --font-md: 2.4rem;
+        --font-lg: 3.6rem;
+        --font-xlg: 7.2rem;
+    }
+    .plans__plan-box{
+        width: 220px;
+    }
+    .image{
+        justify-content: center;
+        padding: 0;
+    }
+}
